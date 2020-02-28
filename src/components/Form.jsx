@@ -58,7 +58,7 @@ const Formbuild = ({values, errors, touched, status}) =>{
 const Formikform = withFormik({
     
     mapPropsToValues(props) {
-      // set initial state of form to value from parent component OR the initial value (after || )
+      
       return {
         name: props.name || "",
         email: props.email || "",
