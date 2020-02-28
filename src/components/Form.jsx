@@ -68,12 +68,12 @@ const Formikform = withFormik({
       };
       
 },
-// validationSchema: Yup.object().shape({
-//     name: Yup.string().min(2, 'name must be at least 2 characters').required('must fill in name'),
-//     password: Yup.string().min(6, 'password must contain at least 6 charaters').required('Password is required'),
-//     email: Yup.string().required('Valid Email address is required'),
-//     tos: Yup.boolean().oneOf([true], "You must accept the ToS to continue"),
-//   }),
+validationSchema: Yup.object().shape({
+    name: Yup.string().min(2, 'name must be at least 2 characters').required('must fill in name'),
+    password: Yup.string().min(6, 'password must contain at least 6 charaters').required('Password is required'),
+    email: Yup.string().required('Valid Email address is required'),
+    tos: Yup.boolean().oneOf([true], "You must accept the ToS to continue"),
+  }),
   handleSubmit(values, { setStatus, resetForm }) {
     console.log("submitting", values);
     axios
